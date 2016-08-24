@@ -42,75 +42,153 @@ li a {
   border: 1px solid red;
   left: 25%;
   top: 10%;
-  width: 470px;
-  height: 400px;
+  width: 50%;
+  height: 80%;
   border-radius: 50%;
-  position: absolute;
+  position: relative;
 }
 
-/*flavor buttons*/
+/*bad flavor buttons*/
 #overwhelming {
   position: absolute;
-  left: 630px;
-  top: 50px;
+  left: 67%;
+  top: 10%;
 }
 
 #dry {
   position: absolute;
-  left: 700px;
-  top: 150px;
+  left: 74%;
+  top: 30%;
 }
 
 #bitter {
   position: absolute;
-  left: 720px;
-  top: 200px;
+  left: 76%;
+  top: 40%;
 }
 
 #astringent {
   position: absolute;
-  left: 720px;
-  top: 300px;
+  left: 76%;
+  top: 60%;
 }
 
 #muted {
   position: absolute;
-  left: 630px;
-  top: 405px;
+  left: 65%;
+  top: 86%;
 }
 
 #tea-like {
   position: absolute;
-  left: 235px;
-  top: 405px;
+  left: 25%;
+  top: 80%;
 }
 
 #vegetal {
   position: absolute;
-  left: 190px;
-  top: 345px;
+  left: 20%;
+  top: 69%;
 }
 
 #sour {
   position: absolute;
-  left: 170px;
-  top: 300px;
+  left: 19%;
+  top: 60%;
 }
 
 #beefy {
   position: absolute;
-  left: 255px;
-  top: 75px;
+  left: 27%;
+  top: 15%;
 }
 
 #soupy {
   position: absolute;
-  left: 295px;
-  top: 40px;
+  left: 31%;
+  top: 8%;
 }
 
 #strong{
   position: absolute;
+  left: 47%;
+  top: 4%;
+}
 
+#over-extracted {
+  position: absolute;
+  left: 76%;
+  top: 50%;
+}
+
+#weak {
+  position: absolute;
+  left: 47%;
+  top: 95%;
+}
+
+#under-extracted {
+  position: absolute;
+  left:12%;
+  top: 50%;
+}
+#dull {
+  position: absolute;
+  left: 20%;
+  top: 35%;
+}
+
+/*good flavors*/
+#balanced {
+  position: absolute;
+  left: 45%;
+  top: 40%;
+}
+
+#heavy-robust {
+  position: absolute;
   left: 50%;
+  top: 10%;
+}
+
+#fruity {
+  position: absolute;
+  left: 70%;
+  top: 30%;
+}
+
+#sweet {
+  position: absolute;
+  left: 85%;
+  top: 40%;
+}
+
+#delicate {
+  position: absolute;
+  left: 65%;
+  top: 75%;
+}
+
+#creamy {
+  position: absolute;
+  left: 39%;
+  top: 67%;
+}
+
+#soft {
+  position: absolute;
+  left: 25%;
+  top: 73%;
+}
+
+#smooth {
+  position: absolute;
+  left: 14%;
+  top: 30%;
+}
+
+#plump {
+  position: absolute;
+  left: 22%;
+  top: 12%;
 }
