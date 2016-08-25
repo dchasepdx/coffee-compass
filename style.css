@@ -3,7 +3,18 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+html, body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+/*buttons*/
+.flavor {
+  text-decoration: none;
+  padding: 5px;
+  background-color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  border: none;
+}
 /*nav bar*/
 ul {
   list-style-type: none;
@@ -33,12 +44,12 @@ li a {
 /*compassFrame and compass*/
 
 .compassFrame {
-  border-left: 1px solid black;
+  /*border-left: 1px solid black;
   border-bottom: 1px solid black;
-  border-right: 1px solid black;
+  border-right: 1px solid black;*/
   margin: 0 auto;
   max-width: 940px;
-  height: 500px;
+  height: 520px;
   position: relative;
 }
 
@@ -128,7 +139,7 @@ li a {
 #weak {
   position: absolute;
   left: 47%;
-  top: 95%;
+  top: 93%;
 }
 
 #under-extracted {
@@ -212,6 +223,7 @@ li a {
 /*recomendation*/
 .recomendation {
   text-align: center;
+  font-size: 18px;
 }
 /*how to and save brew sections*/
 .container {
@@ -233,5 +245,6 @@ li a {
   min-height: 1px;
   width: 33%;
   padding: 12px;
+  font-size: 20px;
 
 }
