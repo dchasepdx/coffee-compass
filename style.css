@@ -216,7 +216,7 @@ li a {
 /*how to and save brew sections*/
 .container {
   width: 100%;
-  max-width: 1200px;
+  /*max-width: 1200px;*/
   box-sizing: border-box;
   margin-left: 16px;
 
