@@ -5,6 +5,7 @@ var brew = document.getElementById('brew');
 var changes = document.getElementById('changes');
 for(i = 0; i<flavor.length; i++) {
   flavor[i].addEventListener('click', function() {
+
     brew.textContent = this.id;
     switch(this.id) {
       case "strong":
@@ -42,4 +43,52 @@ for(i = 0; i<flavor.length; i++) {
   });
 }
 
-//function to hide recomendation on load
+//functions to hide recommendation on load and show on click
+//function hide() {
+  //document.getElementById('show').id = 'hide';
+//}
+function show() {
+  if (document.getElementById('hide')) {
+    document.getElementById('hide').id = 'show';
+  }
+
+}
+//window.onload = hide;
+for(i = 0; i<flavor.length; i++) {
+  flavor[i].addEventListener('click', show);
+}
+
+//functions for saving to localStorage and drop down menu
+window.onload = function() {
+  function hide() {
+    document.getElementById('show').id = 'hide';
+  }
+
+  submit.onclick = save;
+  function save() {
+    var submit = document.getElementById('submit');
+    var origin = document.getElementById("origin").value;
+    var dose = document.getElementById("dose").value;
+    var waterWeight = document.getElementById("waterWeight").value;
+    var time = document.getElementById("time").value;
+    localStorage.setItem(origin, [dose, waterWeight, time]);
+
+  }
+  function createDrop() {
+
+    var select = document.getElementById('select');
+    var keys = [];
+
+    for (var i = 0; i < localStorage.length; i++) {
+      keys.push(localStorage.key(i));
+      }
+      for (var val in keys) {
+        var newDrop = document.createElement('option');
+        newDrop.innerText = keys[val];
+        newDrop.setAttribute('value', localStorage.key(val));
+        select.appendChild(newDrop);
+        }
+      }
+      createDrop();
+      hide();
+    }

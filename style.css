@@ -221,7 +221,7 @@ li a {
 }
 
 /*recomendation*/
-.recomendation {
+.recommendation {
   text-align: center;
   font-size: 18px;
 }
@@ -247,4 +247,8 @@ li a {
   padding: 12px;
   font-size: 20px;
 
+}
+/*hide recommendation section on load*/
+#hide {
+  display: none;
 }

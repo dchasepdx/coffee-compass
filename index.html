@@ -4,7 +4,7 @@
   <title>Coffee Compass</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-
+  <script src="main.js"></script>
 </head>
 <body>
   <nav>
@@ -50,8 +50,8 @@
 
       </div>
     </div>
-      <div class="recomendation">
-        <h2>Recomendation</h2>
+      <div class="recommendation">
+        <h2>Recommendation</h2>
         <p id="show">Your first brew tasted <span id="brew"></span>.<span id="changes"> You need less coffee in your next brew. Either increase your water weight, or increase your coffee dose.</span>
         </p>
 
@@ -61,7 +61,7 @@
       <div class="howTo col"><a name="howTo"></a>
       <h2>How to use the Coffee Compass</h2>
       <p>
-        First, brew a cup of coffee. Taste it and find a flavor on the compass. Desireable flavors are in the green center, while undesireable flavors are on the outside. If you detect an undesireable flavor, click on it, and a recomendation will be generated to improve your next brew. Continue this process until you are satisfied with your coffee.
+        First, brew a cup of coffee. Taste it and find a flavor on the compass. Desireable flavors are in the green center, while undesireable flavors are on the outside. If you detect an undesireable flavor, click on it, and a recommendation will be generated to improve your next brew. Continue this process until you are satisfied with your coffee.
       </p>
     </div>
     <div class="col">
@@ -75,6 +75,20 @@
       <p>
         If you find a recipe you like, save it by naming your recipe and clicking save. Saved brews can be accessed with the drop down menu.
       </p>
+      <form>
+        Origin:<br>
+        <input id="origin"type="text" name="origin"><br>
+        Dose: <br>
+        <input id="dose" type="text" name="dose"><br>
+        Water weight: <br>
+        <input id="waterWeight"type="text" name="waterWeight"><br>
+        Time: <br>
+        <input id="time" type="text" name="time"><br>
+        <input id="submit" type="button" value="Save">
+      </form>
+      <select id="select">
+
+      </select>
     </div>
   </div>
 
