@@ -71,7 +71,8 @@ window.onload = function() {
     var dose = document.getElementById("dose").value;
     var waterWeight = document.getElementById("waterWeight").value;
     var time = document.getElementById("time").value;
-    localStorage.setItem(origin, [dose, waterWeight, time]);
+    var values = [dose, waterWeight, time];
+    localStorage.setItem(origin, JSON.stringify(values));
 
   }
   function createDrop() {
@@ -91,4 +92,21 @@ window.onload = function() {
       }
       createDrop();
       hide();
+      //functions for dispalying saved recipes
+      var select = document.getElementById('select');
+      var originH3 = document.getElementById('originSave');
+      var doseH3 = document.getElementById('doseSave');
+      var waterWeightH3 = document.getElementById('waterWeightSave');
+      var timeH3 = document.getElementById('timeSave');
+
+
+      select.onchange = function() {
+        var choice = document.getElementById('select').value;
+        originH3.textContent = "Origin: " + choice;
+        var values = JSON.parse(localStorage.getItem(choice));
+        doseH3.textContent = "Dose: " + values[0];
+        waterWeightH3.textContent = "Water weight: " + values[1];
+        timeH3.textContent = "Time: " + values[2];
+      }
+
     }
