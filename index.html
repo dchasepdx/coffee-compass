@@ -9,9 +9,7 @@
 <body>
   <nav>
     <ul>
-      <li><a class="active" href="#">Coffee Compass</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#">Coffee Compass</a></li>
       <li><a href="#howTo">How to use the Coffee Compass</a></li>
     </ul>
   </nav>
@@ -52,19 +50,20 @@
     </div>
       <div class="recommendation">
         <h2>Recommendation</h2>
-        <p id="hide">Your first brew tasted <span id="brew"></span>.<span id="changes"> You need less coffee in your next brew. Either increase your water weight, or increase your coffee dose.</span>
+        <!--hidden on page load so the sentence isn't show without filling in the <span> sections-->
+        <p id="hide">Your first brew tasted <span id="brew"></span>. <span id="changes"> You need less coffee in your next brew. Either increase your water weight, or increase your coffee dose.</span>
         </p>
 
       </div>
+      <!--Container div is used to set up grid system. 3 columns of equal width are used (class="col")-->
     <div class="container">
-
       <div class="howTo col"><a name="howTo"></a>
       <h2>How to use the Coffee Compass</h2>
       <p>
         First, brew a cup of coffee. Taste it and find a flavor on the compass. Desireable flavors are in the green center, while undesireable flavors are on the outside. If you detect an undesireable flavor, click on it, and a recommendation will be generated to improve your next brew. Continue this process until you are satisfied with your coffee.
       </p>
     </div>
-    <div class="col">
+    <div class="col"><!--This div displays saved recipes. It is populated with blank section if no localStorage is found. On page load it is populated with the first saved recipe in the dropdown.-->
       <h3 id='originSave'>Origin: </h3>
       <h3 id='doseSave'>Dose: </h3>
       <h3 id='waterWeightSave'>Water Weight: </h3>

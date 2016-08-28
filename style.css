@@ -1,3 +1,4 @@
+/*Applies border-box sizing to all elements on page*/
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -44,9 +45,6 @@ li a {
 /*compassFrame and compass*/
 
 .compassFrame {
-  /*border-left: 1px solid black;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;*/
   margin: 0 auto;
   max-width: 940px;
   height: 520px;
@@ -63,7 +61,7 @@ li a {
   position: relative;
 }
 
-/*bad flavor buttons*/
+/*bad flavor buttons. Each is individually placed. Responsiveness is good, but I probably need to add media queries for smaller screen sizes*/
 #overwhelming {
   position: absolute;
   left: 67%;
@@ -225,15 +223,14 @@ li a {
   text-align: center;
   font-size: 18px;
 }
-/*how to and save brew sections*/
+/*how to and save brew sections. Set up in a 3 col grid, equally spaced.*/
 .container {
   width: 100%;
-  /*max-width: 1200px;*/
   box-sizing: border-box;
   margin-left: 16px;
 
 }
-
+/*clearfix for .container*/
 .container:after {
   content: "";
   display: table;

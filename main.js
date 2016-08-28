@@ -1,5 +1,4 @@
-//function to set <span> to equal the flavor clicked.
-//and to show the corresponding instructions.
+//function to set <span> to equal the flavor clicked. And to show the corresponding instructions.
 var flavor = document.getElementsByClassName('flavor');
 var brew = document.getElementById('brew');
 var changes = document.getElementById('changes');
@@ -43,10 +42,8 @@ for(i = 0; i<flavor.length; i++) {
   });
 }
 
-//functions to hide recommendation on load and show on click
-/*function hide() {
-  document.getElementById('show').id = 'hide';
-} un needed code. Delete after review*/
+//function to show recommendation on click
+
 for(i = 0; i<flavor.length; i++) {
   flavor[i].addEventListener('click', show);
 }
@@ -57,16 +54,14 @@ function show() {
   }
 
 }
-//window.onload = hide; un needed code, delete after review
 
 
-/*functions for saving to localStorage and drop down menu as well as hide function.
+
+/*functions for saving to localStorage and drop down menu.
 Needed to be in windows.onload becuase many dynamically created elements weren't
 loaded before functions ran resulting in null and undefined variables*/
 window.onload = function() {
-  function hide() { //hide function is unnecessary.
-    document.getElementById('show').id = 'hide';
-  }
+
   //localStorage
   submit.onclick = save;
   function save() {
@@ -76,7 +71,12 @@ window.onload = function() {
     var waterWeight = document.getElementById("waterWeight").value;
     var time = document.getElementById("time").value;
     var values = [dose, waterWeight, time];//saved value as array to access by index
-    localStorage.setItem(origin, JSON.stringify(values));
+    if (origin && dose && waterWeight && time) {
+      localStorage.setItem(origin, JSON.stringify(values));
+    }
+    else {
+      alert("Please fill in all fields");
+    }
 
   }
   //creating dropdown menu. Had to be in onload function because localStorage was loading after variables were assigned
@@ -89,7 +89,7 @@ window.onload = function() {
     for (var i = 0; i < localStorage.length; i++) { //loop to push LS keys to array
       keys.push(localStorage.key(i));
       }
-      for (var val in keys) {     //loop to create <option> tag
+      for (var val in keys) {     //loop to create <option> tag for each key
         var newDrop = document.createElement('option');
         newDrop.innerText = keys[val];
         newDrop.setAttribute('value', localStorage.key(val));
@@ -98,8 +98,7 @@ window.onload = function() {
       }
       if(localStorage.length > 0){
       createDrop();
-    } //runs the function after the page has loaded ensuring variables are assigned correctly.
-      //hide(); unnecessary, set class to hide in html
+    }
       //functions for dispalying saved recipes
       var select = document.getElementById('select');
       var originH3 = document.getElementById('originSave');
